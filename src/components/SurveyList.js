@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { useFirestoreConnect, isLoaded, isEmpty } from 'react-redux-firebase'
+import { useFirestoreConnect, isLoaded, /*isEmpty*/ } from 'react-redux-firebase'
 import SurveyCard from './SurveyCard'
 
 export default function SurveyList(props) {
