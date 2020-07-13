@@ -8,15 +8,11 @@ export default function NewSurveyForm(props) {
   const [name, setName] = useState('')
   const [q1, setQ1] = useState('');
   const [a1, setA1] = useState('');
-  const AddSurvey = () => {
 
+  const AddSurvey = () => {
     console.log(q1, a1)
     setFormVisible(false)
-    return firestore.collection('surveys').add({
-      name,
-      q1: q1,
-      a1: a1
-    })
+    return firestore.collection('surveys').add({ name, q1, a1 })
   }
   return (
     <form>
