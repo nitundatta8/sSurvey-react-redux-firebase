@@ -14,7 +14,7 @@ export default function SurveyList(props) {
   const surveys = useSelector(state => state.firestore.ordered.surveys)
 
   if (isLoaded(surveys)) {
-    console.log(SurveyCard);
+
 
     return (
       <>
