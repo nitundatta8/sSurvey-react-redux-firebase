@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { useFirestoreConnect, isLoaded, /*isEmpty*/ } from 'react-redux-firebase'
-import SurveyCard from './SurveyCard'
+import SurveyCard from './SurveyCard2'
 
 export default function SurveyList(props) {
   const { setFormVisible } = props
@@ -14,6 +14,8 @@ export default function SurveyList(props) {
   const surveys = useSelector(state => state.firestore.ordered.surveys)
 
   if (isLoaded(surveys)) {
+    console.log(SurveyCard);
+
     return (
       <>
         {surveys.map(survey => <SurveyCard survey={survey} key={survey.id} />)}
