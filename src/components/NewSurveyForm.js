@@ -5,6 +5,7 @@ import { useFirestore } from 'react-redux-firebase'
 export default function NewSurveyForm(props) {
   const { setFormVisible } = props
   const firestore = useFirestore();
+  console.log(firestore);
   const [name, setName] = useState('')
   const [q1, setQ1] = useState('');
   const [a1, setA1] = useState('');
